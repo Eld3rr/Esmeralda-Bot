@@ -28,6 +28,8 @@ exports.run = async(bot, message, args) => {
         msg.reactions.removeAll()
         msg.edit(port1)
         db.ref(`Configuração/SetIdioma/${message.author.id}`).set('Pt-Br')
+        Portugues.stop()
+        Ingles.stop()
     })
 
     Ingles.on("collect", r2 => {
@@ -38,6 +40,8 @@ exports.run = async(bot, message, args) => {
         db.ref(`Configuração/SetIdioma/${message.author.id}`).set('En-Us')
         msg.reactions.removeAll()
         msg.edit(ingl1)
+        Portugues.stop()
+        Ingles.stop()
     })
     })
   
