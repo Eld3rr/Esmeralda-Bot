@@ -120,7 +120,7 @@ bot.on("guildDelete", async(guild) => {
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
-fs.readdir("./comandos/", async (err, files) => {
+fs.readdir("./comandos", async (err, files) => {
   if (err) console.error(err); 
   let arquivojs = files.filter(file => !file.endsWith('.js'))
     arquivojs.forEach((f, i) => {
