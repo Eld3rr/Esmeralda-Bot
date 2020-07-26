@@ -8,14 +8,14 @@ exports.run = async(bot, message, args) => {
     .setTitle("Language / Idioma")
     .setDescription("Reaja ao emoji de acordo com o seu idioma.\nReact to the emoji according to your language.")
     .addField("🇧🇷| Brazil/Brasil", 'Para setar como idioma Brasil!\nFor set how language Brazil!')
-    .addField("🇨🇱| English/Inglês", 'For set with language English!\nPara setar como idioma Ingl锚s!')
+    .addField("🇺🇸| English/Inglês", 'For set with language English!\nPara setar como idioma Inglês!')
 
     message.channel.send(embed1).then(msg => {
         msg.react('🇧🇷')
-        msg.react('🇨🇱')
+        msg.react('🇺🇸')
 
            const PortuguesFilter = (reaction, user) => reaction.emoji.name === "🇧🇷" && user.id === message.author.id
-           const InglesFilter = (reaction, user) => reaction.emoji.name === "🇨🇱" && user.id === message.author.id;
+           const InglesFilter = (reaction, user) => reaction.emoji.name === "🇺🇸" && user.id === message.author.id;
       
            const Portugues = msg.createReactionCollector(PortuguesFilter)
            const Ingles = msg.createReactionCollector(InglesFilter)
@@ -32,7 +32,7 @@ exports.run = async(bot, message, args) => {
 
     Ingles.on("collect", r2 => {
         let ingl1 = new Discord.MessageEmbed()
-        .setTitle("🇨🇱| Language Set!")
+        .setTitle("🇺🇸| Language Set!")
         .setDescription("The language was set for the English.")
 
         db.ref(`Configuração/SetIdioma/${message.author.id}`).set('En-Us')
