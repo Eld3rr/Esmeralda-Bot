@@ -39,8 +39,7 @@ exports.run = async(bot, message, args) => {
 <:memoria:727314935960436916> Memoria Ram: \`${(os.totalmem() /1024 /1024).toFixed(2)} mb.\`
 <:memoria:727314935960436916> Memoria Restante: \`${(os.freemem() /1024 /1024).toFixed(2)} mb.\`
 <:memoria:727314935960436916> Memoria Usada: \`${(process.memoryUsage().heapUsed / 1024 / 1024 /2).toFixed(2)}%\``)
-    .addField("Úteis:", `**[Me Adicione](https://discord.com/oauth2/authorize?client_id=714937188059447377&scope=bot&permissions=8)**
-  **[Suporte](https://discord.gg/ANRpgVg)**`)
+    .addField("Úteis:", `**[Me Adicione](https://discord.com/oauth2/authorize?client_id=714937188059447377&scope=bot&permissions=8)**\n**[Suporte](https://discord.gg/ANRpgVg)**`)
     message.channel.send(but)
     }
 
@@ -69,8 +68,7 @@ exports.run = async(bot, message, args) => {
     <:memoria:727314935960436916> Memory Ram: \`${(os.totalmem() /1024 /1024).toFixed(2)} mb.\`
     <:memoria:727314935960436916> Remaining memory: \`${(os.freemem() /1024 /1024).toFixed(2)} mb.\`
     <:memoria:727314935960436916> Memory Usad: \`${(process.memoryUsage().heapUsed / 1024 / 1024 /2).toFixed(2)}%\``)
-        .addField("Useful:", `**[Add Me](https://discord.com/oauth2/authorize?client_id=714937188059447377&scope=bot&permissions=0)**
-      **[Support](https://discord.gg/ANRpgVg)**`)
+        .addField("Useful:", `**[Add Me](https://discord.com/oauth2/authorize?client_id=714937188059447377&scope=bot&permissions=8)**\n**[Support](https://discord.gg/ANRpgVg)**`)
         message.channel.send(but)
     }
 }
