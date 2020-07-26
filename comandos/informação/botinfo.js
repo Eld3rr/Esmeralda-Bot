@@ -4,7 +4,7 @@ const firebase = require("firebase");
 const db = firebase.database();
 exports.run = async(bot, message, args) => {
 
-    let lang = await db.ref(`ConfiguraÃ§Ã£o/SetIdioma/${message.author.id}`).once('value')
+    let lang = await db.ref(`Configuração/SetIdioma/${message.author.id}`).once('value')
     lang = lang.val();
 
     if(!lang) {
