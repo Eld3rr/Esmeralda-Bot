@@ -205,4 +205,4 @@ bot.on('ready', async() => {
     bot.channels.cache.get(ch).send(on)
 });
 
-bot.login(config.token)
+bot.login(process.env.token)
