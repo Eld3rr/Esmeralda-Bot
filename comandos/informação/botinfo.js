@@ -10,8 +10,8 @@ exports.run = async(bot, message, args) => {
     if(!lang) {
       let langz = new Discord.MessageEmbed()
       .addField("Language / Idioma", `English: You need set a language first, use: e!setlanguage
-      PortuguÃªs: VocÃª precisa setar um idioma primeiro, utilize: e!setidioma`)
-      message.reply(langz)
+      Português: Você precisa setar um idioma primeiro, utilize: e!setidioma`)
+      message.channel.send(langz)
     };
 
     //portugues
@@ -41,7 +41,7 @@ exports.run = async(bot, message, args) => {
 <:memoria:727314935960436916> Memoria Usada: \`${(process.memoryUsage().heapUsed / 1024 / 1024 /2).toFixed(2)}%\``)
     .addField("Ãšteis:", `**[Me Adicione](https://discord.com/oauth2/authorize?client_id=730788747490099270&scope=bot&permissions=0)**
     **[Suporte](https://discord.gg/ANRpgVg)**`)
-    message.reply(but)
+    message.channel.send(but)
     }
 
     //ingles
@@ -71,7 +71,7 @@ exports.run = async(bot, message, args) => {
     <:memoria:727314935960436916> Memory Usad: \`${(process.memoryUsage().heapUsed / 1024 / 1024 /2).toFixed(2)}%\``)
         .addField("Useful:", `**[Add Me](https://discord.com/oauth2/authorize?client_id=730788747490099270&scope=bot&permissions=0)**
         **[Support](https://discord.gg/ANRpgVg)**`)
-        message.reply(but)
+        message.channel.send(but)
     }
 }
 
