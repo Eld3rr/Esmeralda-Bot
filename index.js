@@ -61,6 +61,18 @@ bot.on("guildMemberRemove", async(member) => {
  }
 });
 
+var firebaseConfig = {
+    apiKey: "AIzaSyCl7Ehyk0T5_ri2vkKhG_4GX7ke7sz87iA",
+    authDomain: "esmeralda-database.firebaseapp.com",
+    databaseURL: "https://esmeralda-database.firebaseio.com",
+    projectId: "esmeralda-database",
+    storageBucket: "esmeralda-database.appspot.com",
+    messagingSenderId: "1005084888",
+    appId: "1:1005084888:web:cccf7eb15e92ee547277ad"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
 bot.on("guildMemberUpdate", async(oldMember, newMember) => {
 
   let canal = await db.ref(`Configuração/MemberUpdate/${newMember.guild.id}/Canal`).once('value')
