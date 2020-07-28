@@ -17,7 +17,7 @@ jimp.read('https://sm.ign.com/ign_br/news/a/avatar-the/avatar-the-last-airbender
     console.log('Erro ao carregar a imagem')
   });
 
-})
+}
 exports.help = {
 name: "teste",
 aliases: []
