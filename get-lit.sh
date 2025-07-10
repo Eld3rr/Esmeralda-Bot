@@ -9,11 +9,11 @@ LIT_URL="https://lit.luvit.io/packages/luvit/lit/v$LIT_VERSION.zip"
 
 # Download Files
 echo "Downloading $LUVI_URL to luvi"
-curl -L -f -o luvi $LUVI_URL
+curl -o luvi $LUVI_URL
 chmod +x luvi
 
 echo "Downloading $LIT_URL to lit.zip"
-curl -L -f -o lit.zip $LIT_URL
+curl -o lit.zip $LIT_URL
 
 # Create lit using lit
 ./luvi lit.zip -- make lit.zip lit luvi
